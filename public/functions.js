@@ -120,12 +120,9 @@ document.querySelector("table tbody").addEventListener("click", e => {
 document.getElementById('search').addEventListener('input', e => {
     const text = e.target.value.toLowerCase();
     const filtered = allTeams.filter(team => {
-        console.warn('filter team');
         return team.members.toLowerCase().indexOf(text) > -1;
     });
-        console.warn(filtered);
         showTeams(filtered);
-    
 })
 
 function setValues(team) {
